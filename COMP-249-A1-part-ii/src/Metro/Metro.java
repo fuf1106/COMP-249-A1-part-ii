@@ -7,6 +7,10 @@
 package Metro;
 import Train_And_Tram.Train;
 
+/**
+ * Represents a Metro object.
+ * This class defines the basic properties and behaviors of a Metro, such as total stops.
+ */
 public class Metro extends Train {
     //Instance variables
     private int totalStops;
@@ -39,15 +43,25 @@ public class Metro extends Train {
         this.totalStops = oldMetro.totalStops;
     }
 
-    //Getters and Setters
+     /**
+     * Gets the total number of stops for this Metro.
+     * @return The total number of stops made by this Metro.
+     */  
     public int getTotalStops() {
         return totalStops;
     }
+
+    /**
+     * Sets the total number of stops for this Metro.
+     * @param totalStops The new total number of stops to set for this Metro.
+     */
     public void setTotalStops(int totalStops) {
         this.totalStops = totalStops;
     }
+	
     /**
-     * @return the next serial number
+     * Gets the next serial number for a Metro object and increments the serial number generator.
+     * @return The next available serial number.
      */
     @Override
     public long getNextSerialNumber(){
@@ -66,7 +80,7 @@ public class Metro extends Train {
      * If they are not equal, the method returns false
      * If they are equal, then the object is cast as a Metro and returns true
      * @param obj Takes an Object
-     * @return true or false
+     * @return boolean
      */
     @Override
     public boolean equals(Object obj){
@@ -82,8 +96,8 @@ public class Metro extends Train {
         }
     }
     /**
- 	* This method creates a copy of the current object
-	*/
+    * This method creates a copy of the current object
+    */
     @Override
     public Metro copy() {
         return new Metro(this);
