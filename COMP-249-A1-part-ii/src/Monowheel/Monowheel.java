@@ -7,8 +7,11 @@
 package Monowheel;
 import WheeledTransportation.WheeledTransportation;
 
+/**
+ * Represents a Monowheel object.
+ * This class defines the basic properties and behaviors of a Monowheel, such as max weight
+ */
 public class Monowheel extends WheeledTransportation {
-    //Instance variables 
     private double maxWeight;
     private static long serialNumberGenerator = 55000;
 
@@ -18,6 +21,7 @@ public class Monowheel extends WheeledTransportation {
     public Monowheel() {
         this.maxWeight = 0;
     }
+	
      /**
      * Parameterized constructor constructs a new Monowheel object
      * @param numberOfWheels number of wheels
@@ -28,6 +32,7 @@ public class Monowheel extends WheeledTransportation {
         super(numberOfWheels, maxSpeed);
         this.maxWeight = maxWeight;
     }
+	
      /**
      * Copy constructor constructs a copy of a Monowheel object
      * @param oldMonowheel takes a Monowheel object
@@ -36,15 +41,25 @@ public class Monowheel extends WheeledTransportation {
         super(oldMonowheel);
         this.maxWeight = oldMonowheel.maxWeight;
     }
-    //Getters and Setters
+
+    /**
+     * Gets the maximum weight capacity of this Monowheel.
+     * @return The maximum weight capacity for this Monowheel.
+     */	
     public double getMaxWeight() {
         return maxWeight;
     }
+
+    /**
+     * Sets the maximum weight capacity for this Monowheel.
+     * @param maxWeight The new maximum weight capacity to set for this Monowheel.
+     */	
     public void setMaxWeight(double maxWeight) {
         this.maxWeight = maxWeight;
     }
     /**
-     * @return the next serial number
+     * Gets the next serial number for a Monowheel object and increments the serial number generator.
+     * @return The next available serial number.
      */
     @Override
     public long getNextSerialNumber(){
@@ -63,7 +78,7 @@ public class Monowheel extends WheeledTransportation {
      * If they are not equal, the method returns false
      * If they are equal, then the object is cast as a Monowheel and returns true
      * @param obj Takes an Object
-     * @return true or false
+     * @return boolean
      */
     public boolean equals(Object obj){
         if (obj == null) {
@@ -78,8 +93,8 @@ public class Monowheel extends WheeledTransportation {
         }
     }
     /**
- 	* This method creates a copy of the current object
-	*/
+    * This method creates a copy of the current object
+    */
     public Monowheel copy() {
         return new Monowheel(this);
     }
