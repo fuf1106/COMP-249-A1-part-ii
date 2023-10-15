@@ -24,7 +24,11 @@ import WheeledTransportation.*;
 import java.lang.Object;
 
 public class Driver {
-
+	/**
+	 * This method creates a new array of objects that is the same length as the parameter's array
+  	 * The method loops through each element in the old array, creates a cope of this element cast as a Vehicle and stores it in the new array
+    	 * @param obj Takes an array of objects 
+	 */
 	public static Object[] copyTheObjects(Object[] obj) {
 		Object[] temp = new Object[obj.length];
 		System.out.println("Making copy of Objects...");
@@ -37,7 +41,7 @@ public class Driver {
 
 	public static void main(String[] args) {
 
-		//declare original array of objects and initialize them:
+		//Declare original array of objects and initialize them:
 		Object[] originalArr = new Object[20];
 
 		originalArr[0] = new WheeledTransportation();
@@ -68,7 +72,7 @@ public class Driver {
 
 		System.out.println();
 
-		Object[] copiedArr = copyTheObjects(originalArr); //calls the method above main to copy the array onto a new one
+		Object[] copiedArr = copyTheObjects(originalArr); //Calls the method above main to copy the array onto a new one
 
 		System.out.println();
 
