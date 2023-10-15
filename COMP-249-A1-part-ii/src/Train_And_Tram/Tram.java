@@ -6,6 +6,11 @@
 
 package Train_And_Tram;
 import Metro.Metro;
+
+/**
+ * Represents a Tram object.
+ * This class defines the basic properties and behaviors of a Tram, such as year of creation,
+ */
 public class Tram extends Metro {
     //Instance variables
     private int yearOfCreation;
@@ -39,15 +44,25 @@ public class Tram extends Metro {
         this.yearOfCreation = oldTram.yearOfCreation;
     }
 
-    //Getters and Setters
+     /**
+     * Gets the year of creation for this Tram.
+     * @return The year when this Tram was created.
+     */    
     public int getYearOfCreation() {
         return yearOfCreation;
     }
+	
+     /**
+     * Sets the year of creation for this Tram.
+     * @param yearOfCreation The new year of creation to assign to this Tram.
+     */
     public void setYearOfCreation(int yearOfCreation) {
         this.yearOfCreation = yearOfCreation;
     }
-      /**
-     * @return the next serial number
+     
+     /**
+     * Gets the next serial number for a Tram object and increments the serial number generator.
+     * @return The next available serial number.
      */
     @Override
     public long getNextSerialNumber(){
@@ -66,7 +81,7 @@ public class Tram extends Metro {
      * If they are not equal, the method returns false
      * If they are equal, then the object is cast as a Tram and returns true
      * @param obj Takes an Object
-     * @return true or false
+     * @return boolean
      */
     @Override
     public boolean equals(Object obj){
@@ -82,8 +97,8 @@ public class Tram extends Metro {
         }
     }
     /**
- 	* This method creates a copy of the current object
-	*/
+    * This method creates a copy of the current object
+    */
     @Override
     public Tram copy() {
         return new Tram(this);
