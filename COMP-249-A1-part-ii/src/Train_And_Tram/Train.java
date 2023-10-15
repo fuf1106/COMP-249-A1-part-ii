@@ -7,8 +7,12 @@
 package Train_And_Tram;
 import WheeledTransportation.WheeledTransportation;
 
+/**
+ * Represents a Train object.
+ * This class defines the basic properties and behaviors of a Train, such as number of vehicles,
+ * starting station name and destination station name
+ */
 public class Train extends WheeledTransportation {
-    //Instance variables
     private int numberOfVehicles;
     private String startingStationName;
     private String destinationStationName;
@@ -48,27 +52,57 @@ public class Train extends WheeledTransportation {
         this.destinationStationName = oldTrain.destinationStationName;
     }
 
-    //Getters and Setters
+     /**
+     * Gets the number of vehicles associated with this Train.
+     * @return The number of vehicles associated with this Train.
+     */    
     public int getNumberOfVehicles() {
         return numberOfVehicles;
     }
+
+     /**
+     * Sets the number of vehicles associated with this Train.
+     * @param numberOfVehicles The new number of vehicles to associate with this Train.
+     */
     public void setNumberOfVehicles(int numberOfVehicles) {
         this.numberOfVehicles = numberOfVehicles;
     }
+	
+     /**
+     * Gets the name of the starting station for this Train.
+     * @return The name of the starting station.
+     */
     public String getStartingStationName() {
         return startingStationName;
     }
+     
+     /**
+     * Sets the name of the starting station for this Train.
+     * @param startingStationName The new name of the starting station to set for this Train.
+     */
     public void setStartingStationName(String startingStationName) {
         this.startingStationName = startingStationName;
     }
+
+     /**
+     * Gets the name of the destination station for this Train.
+     * @return The name of the destination station.
+     */
     public String getDestinationStationName() {
         return destinationStationName;
     }
+
+     /**
+     * Sets the name of the destination station for this Train.
+     * @param destinationStationName The new name of the destination station to set for this Train.
+     */
     public void setDestinationStationName(String destinationStationName) {
         this.destinationStationName = destinationStationName;
     }
+	
     /**
-     * @return the next serial number
+     * Gets the next serial number for a Train object and increments the serial number generator.
+     * @return The next available serial number.
      */
     @Override
     public long getNextSerialNumber(){
@@ -81,7 +115,7 @@ public class Train extends WheeledTransportation {
      * If they are not equal, the method returns false
      * If they are equal, then the object is cast as a Train and returns true
      * @param obj Takes an Object
-     * @return true or false
+     * @return boolean
      */
     public boolean equals(Object obj){
         if (obj == null) {
@@ -105,8 +139,8 @@ public class Train extends WheeledTransportation {
                 this.startingStationName + " and ends at station " + this.destinationStationName + ". ";
     }
     /**
- 	* This method creates a copy of the current object
-	*/
+    * This method creates a copy of the current object
+    */
     @Override
     public Train copy() {
         return new Train(this);
