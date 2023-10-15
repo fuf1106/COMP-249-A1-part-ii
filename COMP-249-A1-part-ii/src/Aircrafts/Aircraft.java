@@ -5,7 +5,11 @@
 //--------------------------------------------------
 
 package Aircrafts;
-
+/**
+ * Represents an Aircraft object.
+ * This class defines the basic properties and behaviors of an aircraft, such as price, maximum elevation,
+ * and serial number.
+ */
 public class Aircraft extends Vehicle {
 	//Instance variables
 	private static long serialNumGenerator = 100000;
@@ -41,25 +45,58 @@ public class Aircraft extends Vehicle {
 		this.price = craft.price;
 		this.maxElevation = craft.maxElevation;
 	}
-	//Getters and setters
+	/**
+	 * Gets the next serial number for an Aircraft object and increments the serial number generator.
+	 * @return The next available serial number.
+	 */	
 	private long getNextSerialNumber() {
 		return serialNumGenerator++;
 	}
+
+	/**
+	 * Gets the price of the aircraft.
+	 * @return The price of the aircraft.
+	 */
 	public double getPrice() {
 		return price;
 	}
+
+	/**
+	 * Gets the maximum elevation the aircraft can reach.
+	 * @return The maximum elevation of the aircraft
+	 */
 	public double getMaxElevation() {
 		return maxElevation;
 	}
+
+	/**
+	 * Gets the serial number of the aircraft.
+	 * @return The serial number of the aircraft.
+	 */
 	public long getSerialNum() {
 		return serialNum;
 	}
+
+	/**
+	 * Sets the price of the aircraft to the specified value.
+	 * @param price The new price of the aircraft.
+	 */
 	public void setPrice(double price) {
 		this.price = price;
 	}
+
+	/**
+	 * Sets the maximum elevation the aircraft can reach to the specified value.
+	 * @param maxElevation The new maximum elevation of the aircraft.
+	 */
 	public void setMaxElevation(double maxElevation) {
 		this.maxElevation = maxElevation;
 	}
+
+	/**
+	 * Sets the serial number of the aircraft to the specified value.
+	 * @param serialNum The new serial number for the aircraft.
+	 */
 	public void setSerialNum(long serialNum) {
 		this.serialNum = serialNum;
 	}	
@@ -76,7 +113,7 @@ public class Aircraft extends Vehicle {
 	 * If they are not equal, the method returns false
 	 * If they are equal, then the object is cast as an Aircraft and returns true
 	 * @param obj Takes an Object
-	 * @return true or false
+	 * @return boolean
 	 */
 	@Override
 	public boolean equals(Object obj) {
