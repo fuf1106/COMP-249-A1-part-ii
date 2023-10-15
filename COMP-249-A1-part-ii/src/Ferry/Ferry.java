@@ -7,12 +7,18 @@
 package Ferry;
 import Aircrafts.Vehicle;
 
+/**
+ * Represents a Ferry object.
+ * This class defines the basic properties and behaviors of a Ferry, such as maximum speed,
+ * maximum load, and serial number.
+ */
 public class Ferry extends Vehicle {
 	//Instance variables
 	private double maxSpeed;
 	private double maxLoad;
 	private long serialNum;
 	private static long serialNumGenerator = 70000; 
+	
 	/**
 	 * Default constructor constructs a new default Ferry object
 	 */
@@ -21,6 +27,7 @@ public class Ferry extends Vehicle {
 		this.maxLoad = 70000;
 		this.serialNum = getNextSerialNumber();
 	}
+	
 	/**
 	 * Parameterized constructor constructs a new Ferry object
 	 * @param maxSpeed maximum speed
@@ -31,6 +38,7 @@ public class Ferry extends Vehicle {
 		this.maxLoad = maxLoad;
 		this.serialNum = getNextSerialNumber();
 	}
+	
 	/**
 	 * Copy constructor constructs a copy of a Ferry object
 	 * @param boat takes an Boat object
@@ -42,27 +50,57 @@ public class Ferry extends Vehicle {
 	}
 	
 	/**
-	 * @return the next serial number
+	 * Gets the next serial number for a Ferry object and increments the serial number generator.
+	 * @return The next available serial number.
 	 */	
 	public long getNextSerialNumber() {
 		return Ferry.serialNumGenerator++;
 	}
-	//Getter and setters
+	
+	/**
+	 * Gets the maximum speed of the Ferry.
+	 * @return The maximum speed of the Ferry.
+	 */	
 	public double getMaxSpeed() {
 		return maxSpeed;
 	}
+
+	/**
+	 * Gets the maximum load capacity of the Ferry.
+	 * @return The maximum load capacity of the Ferry.
+	 */
 	public double getMaxLoad() {
 		return maxLoad;
 	}
+
+	/**
+	 * Gets the serial number of the Ferry.
+	 * @return The serial number assigned to the Ferry.
+	 */
 	public long getSerialNum() {
 		return serialNum;
 	}
+
+	/**
+	 * Sets the maximum speed of the Ferry.
+	 * @param maxSpeed The new maximum speed to set for the Ferry.
+	 */
 	public void setMaxSpeed(double maxSpeed) {
 		this.maxSpeed = maxSpeed;
 	}
+
+	/**
+	 * Sets the maximum load capacity of the Ferry.
+	 * @param maxLoad The new maximum load capacity to set for the Ferry.
+	 */
 	public void setMaxLoad(double maxLoad) {
 		this.maxLoad = maxLoad;
 	}
+
+	/**
+	 * Sets the serial number for the Ferry.
+	 * @param serialNum The new serial number to assign to the Ferry.
+	 */
 	public void setSerialNum(long serialNum) {
 		this.serialNum = serialNum;
 	}
@@ -79,7 +117,7 @@ public class Ferry extends Vehicle {
 	 * If they are not equal, the method returns false
 	 * If they are equal, then the object is cast as a Ferry and returns true
 	 * @param obj Takes an Object
-	 * @return true or false
+	 * @return boolean
 	 */
 	@Override
 	public boolean equals(Object obj) {
