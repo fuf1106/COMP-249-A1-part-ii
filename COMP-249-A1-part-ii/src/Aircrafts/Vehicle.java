@@ -8,7 +8,7 @@
 package Aircrafts;
 
 /**
- * Represents a generic vehicle, which serves as the base class for various vehicle types.
+ * Represents a Vehicle object, which serves as the base class for various vehicle types.
  * This abstract class provides an abstract method for creating a copy of a vehicle, which must be defined or overridden
  * in every subclass. 
  */

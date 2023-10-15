@@ -6,6 +6,11 @@
 
 package Aircrafts;
 
+/**
+ * Represents a WWIIAirplane object.
+ * This class defines the basic properties and behaviors of a WWIIAirplane, such as serial number
+ * and whether it has a twin engine.
+ */
 public class WWIIAirplane extends Aircraft {
 	private static long serialNumGenerator = 80000;
 	private boolean twinEngine;
