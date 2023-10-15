@@ -1,3 +1,18 @@
+
+/**
+ * Names(s) and ID's: Diana Edvi (40198139) AND Fuad Awad (40195634)
+ * COMP249
+ * Assignment # 1
+ * Due Date: October 15, 2023
+ * Written by:
+*/
+
+//--------------------------------------------------
+// Assignment # 1
+// Part: 2
+// Written by Diana Edvi (40198139) AND Fuad Awad (40195634)
+//--------------------------------------------------
+
 package Driver;
 
 import Aircrafts.*;

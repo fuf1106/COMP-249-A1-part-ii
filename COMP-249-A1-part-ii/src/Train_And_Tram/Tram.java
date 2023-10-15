@@ -1,3 +1,9 @@
+//--------------------------------------------------
+// Assignment # 1
+// Part: 2
+// Written by Diana Edvi (40198139) AND Fuad Awad (40195634)
+//--------------------------------------------------
+
 package Train_And_Tram;
 import Metro.Metro;
 public class Tram extends Metro {

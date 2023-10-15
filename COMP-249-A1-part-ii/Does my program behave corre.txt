@@ -1,0 +1,19 @@
+//--------------------------------------------------
+// Assignment # 1
+// Part: 1 and 2
+// Written by Diana Edvi (40198139) AND Fuad Awad (40195634)
+//--------------------------------------------------
+
+Part 1: Does my program behave correctly?
+
+Yes, our program works as expected because it loops through the array of objects and does the following: 
+It first checks to see if the object in the array is an Aircraft or a WWII Airplane. If it does, it will pass said object to a new Aircraft object. This allows the program to access the price attribute.
+Then, the program checks if the price of the object from the array is greater or less than the known/preestablished highest and lowest values. It keeps track of which is the cheapest and most expensive object by storing the index in an int variable for each.
+The program also keeps track of whether any Aircrafts exist in the array through the use of a counter (int variable). Every time an Aircraft object is found, the counter increases by 1. This allows us to easily display whether there is 1 Aircraft, multiple Aircrafts, or none and display information accordingly.
+
+We did encounter an error that we ended up fixing. Our mistake was that we had created a default Aircraft and a default WWII object to compare the classes to, but rather than comparing the classes, we compared the objects, and encountered a logical error where only the price of default objects were compared. In order to fix it, we simply removed the equals method and compared the classes of the objects to the Aircraft and WWII classes respectively.     
+
+Part 2: Does my program behave correctly?
+
+Yes, our program works as expected because we created an abstract super class to all previously made classes called Vehicle which contained an abstract copy method inside it. This ensured that every subclass had a copy method that returned a new object which was a direct copy of the object the method was called on. This allowed us to create copies of all the objects in a mixed array without having to find the type of each object. It also did not require the use of clone().
+The rest of the program works because in our Driver, our copyTheObjects method accepts an array of objects, creates a new array with the same length as the accepted object, and casts each element of the original array to the Vehicle class before copying it into the new array. The method then returns the newly created array.
