@@ -7,8 +7,12 @@
 package WheeledTransportation;
 import Aircrafts.*;
 
+/**
+ * Represents a WheeledTransportation object.
+ * This class defines the basic properties and behaviors of a WheeledTransportation object, such as number of wheels,
+ * maximum speed, and serial number
+ */
 public class WheeledTransportation extends Vehicle {
-    //Instance variables
     private int numberOfWheels;
     private double maxSpeed;
     private long serialNumber;
@@ -43,19 +47,54 @@ public class WheeledTransportation extends Vehicle {
         this.maxSpeed = oldWheeledTransportation.maxSpeed;
     }
 
-    //Getter and Setters
-    public int getNumberOfWheels() {return numberOfWheels;}
-    public void setNumberOfWheels(int numberOfWheels) {this.numberOfWheels = numberOfWheels;}
-    public double getMaxSpeed() {return maxSpeed;}
-    public void setMaxSpeed(double maxSpeed) {this.maxSpeed = maxSpeed;}
-    public long getSerialNumber() { return serialNumber;}
-    public void setSerialNumber(long serialNumber) {this.serialNumber = serialNumber;}
     /**
-     * @return the next serial number
+     * Gets the number of wheels of this WheeledTransportation object.
+     * @return The number of wheels on this WheeledTransportation.
+     */
+    public int getNumberOfWheels() {return numberOfWheels;}
+
+    /**
+     * Sets the number of wheels for this WheeledTransportation object.
+     * @param numberOfWheels The new number of wheels to assign to this WheeledTransportation object.
+     */
+    public void setNumberOfWheels(int numberOfWheels) {this.numberOfWheels = numberOfWheels;}
+
+    /**
+     * Gets the maximum speed of this WheeledTransportation object.
+     * @return The maximum speed of this WheeledTransportation object.
+     */
+    public double getMaxSpeed() {return maxSpeed;}
+
+    /**
+     * Sets the maximum speed for this WheeledTransportation object.
+     * @param maxSpeed The new maximum speed to set for this WheeledTransportation object.
+     */
+    public void setMaxSpeed(double maxSpeed) {this.maxSpeed = maxSpeed;}
+
+    /**
+     * Gets the serial number for this WheeledTransportation object.
+     * @return The unique serial number assigned to this WheeledTransportation.
+     */
+    public long getSerialNumber() {
+        return serialNumber;
+    }
+
+    /**
+     * Sets the serial number for this WheeledTransportation object.
+     * @param serialNumber The new serial number to assign to this WheeledTransportation object.
+     */
+    public void setSerialNumber(long serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    /**
+     * Gets the next serial number for a WheeledTransportation object and increments the serial number generator.
+     * @return The next available serial number.
      */
     public long getNextSerialNumber(){
         return serialNumberGenerator++;
     }
+	
     /**
      * This method checks if the object the method is called on is equal to the Object parameter
      * It first checks if the provided object is null, and if not, compares the equality of the two objects
@@ -85,8 +124,8 @@ public class WheeledTransportation extends Vehicle {
      return "This Wheeled Transportation - serial # " + this.serialNumber + " has " + this.numberOfWheels + " wheel(s) and can reach a maximum speed of " + this.maxSpeed + "km/h";
     }
     /**
- 	* This method creates a copy of the current object
-	*/
+    * This method creates a copy of the current object
+    */
     @Override
     public WheeledTransportation copy() {
         return new WheeledTransportation(this);
