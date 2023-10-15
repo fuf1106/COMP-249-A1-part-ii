@@ -7,7 +7,6 @@
 package Aircrafts;
 
 public class WWIIAirplane extends Aircraft {
-	// Instance variables
 	private static long serialNumGenerator = 80000;
 	private boolean twinEngine;
 
@@ -39,16 +38,25 @@ public class WWIIAirplane extends Aircraft {
 		this.twinEngine = craft.twinEngine;
 	}
 	/**
-	 * @return the next serial number
+	 * Gets the next serial number for an WWIIAirplane object and increments the serial number generator.
+	 * @return The next available serial number.
 	 */
 	private long getNextSerialNumber() {
 		return WWIIAirplane.serialNumGenerator++;
 	}
 	
-	//getters and setters for twinengine
+	/**
+	 * Gets the status of the twin engine for this aircraft.
+	 * @return true if the aircraft has a twin engine; false otherwise.
+	 */	
 	public boolean getTwinEngine() {
 		return false;
-	}	
+	}
+
+	/**
+	 * Sets the twin engine status for this aircraft.
+	 * @param twinEngine true if the aircraft has a twin engine; false otherwise.
+	 */
 	public void setTwinEngine(boolean twinEngine) {
 		this.twinEngine = twinEngine;
 	}
@@ -72,7 +80,7 @@ public class WWIIAirplane extends Aircraft {
 	 * If they are not equal, the method returns false
 	 * If they are equal, then the object is cast as a WWIIAirplane and returns true
 	 * @param obj Takes an Object
-	 * @return true or false
+	 * @return boolean
 	 */
 	@Override
 	public boolean equals(Object obj) {
