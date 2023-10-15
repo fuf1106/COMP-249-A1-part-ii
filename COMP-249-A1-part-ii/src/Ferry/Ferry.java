@@ -69,6 +69,7 @@ public class Ferry extends Vehicle {
 	/**
 	 * @return a String outputting the information of the current object
 	 */
+	@Override
 	public String toString() {
 		return "This ferry - serial #" + this.serialNum + " - has a maximum speed of " + this.maxSpeed + " km/h and a maximum load of " + this.maxLoad + " kg.";
 	}
@@ -80,6 +81,7 @@ public class Ferry extends Vehicle {
 	 * @param obj Takes an Object
 	 * @return true or false
 	 */
+	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) {
 			return false;
@@ -95,6 +97,7 @@ public class Ferry extends Vehicle {
 	/**
  	* This method creates a copy of the current object
 	*/
+	@Override
 	public Ferry copy() {
 		return new Ferry(this);
 	}

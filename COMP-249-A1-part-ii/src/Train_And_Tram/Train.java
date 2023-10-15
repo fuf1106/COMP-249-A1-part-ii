@@ -107,6 +107,7 @@ public class Train extends WheeledTransportation {
     /**
  	* This method creates a copy of the current object
 	*/
+    @Override
     public Train copy() {
         return new Train(this);
     }

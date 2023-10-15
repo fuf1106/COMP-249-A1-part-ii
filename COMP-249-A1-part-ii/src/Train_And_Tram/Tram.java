@@ -68,6 +68,7 @@ public class Tram extends Metro {
      * @param obj Takes an Object
      * @return true or false
      */
+    @Override
     public boolean equals(Object obj){
         if (obj == null) {
             return false;
@@ -83,6 +84,7 @@ public class Tram extends Metro {
     /**
  	* This method creates a copy of the current object
 	*/
+    @Override
     public Tram copy() {
         return new Tram(this);
     }

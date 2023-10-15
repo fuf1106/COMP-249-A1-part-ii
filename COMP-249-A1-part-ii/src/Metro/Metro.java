@@ -84,6 +84,7 @@ public class Metro extends Train {
     /**
  	* This method creates a copy of the current object
 	*/
+    @Override
     public Metro copy() {
         return new Metro(this);
     }

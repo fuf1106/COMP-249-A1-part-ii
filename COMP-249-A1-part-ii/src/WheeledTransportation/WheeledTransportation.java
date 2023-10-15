@@ -64,6 +64,7 @@ public class WheeledTransportation extends Vehicle {
      * @param obj Takes an Object
      * @return boolean
      */
+    @Override
     public boolean equals(Object obj){
         if (obj == null) {
             return false;
@@ -79,12 +80,14 @@ public class WheeledTransportation extends Vehicle {
     /**
      * @return a String outputting the information of the current object
      */
+    @Override
     public String toString(){ //matching formats?
      return "This Wheeled Transportation - serial # " + this.serialNumber + " has " + this.numberOfWheels + " wheel(s) and can reach a maximum speed of " + this.maxSpeed + "km/h";
     }
     /**
  	* This method creates a copy of the current object
 	*/
+    @Override
     public WheeledTransportation copy() {
         return new WheeledTransportation(this);
     }

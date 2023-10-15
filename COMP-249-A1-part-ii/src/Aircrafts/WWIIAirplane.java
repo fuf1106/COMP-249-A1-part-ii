@@ -55,6 +55,7 @@ public class WWIIAirplane extends Aircraft {
 	/**
 	 * @return a String outputting the information of the current object
 	 */
+	@Override
 	public String toString() {
 		String temp = super.toString();
 		if (twinEngine) {
@@ -73,6 +74,7 @@ public class WWIIAirplane extends Aircraft {
 	 * @param obj Takes an Object
 	 * @return true or false
 	 */
+	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) {
 			return false;
@@ -88,6 +90,7 @@ public class WWIIAirplane extends Aircraft {
 	/**
  	* This method creates a copy of the current object
 	*/
+	@Override
 	public WWIIAirplane copy() {
 		return new WWIIAirplane(this);
 	}

@@ -64,8 +64,9 @@ public class Aircraft extends Vehicle {
 		this.serialNum = serialNum;
 	}	
 	/**
-    	 * @return a String outputting the information of the current object
-    	 */
+	 * @return a String outputting the information of the current object
+	 */
+	@Override
 	public String toString() {
 		return "This aircraft - serial #" + this.serialNum + " - has a price of $" + this.price + " and can reach a maximum elevation of " + this.maxElevation + " feet.";
 	}
@@ -77,6 +78,7 @@ public class Aircraft extends Vehicle {
 	 * @param obj Takes an Object
 	 * @return true or false
 	 */
+	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) {
 			return false;
@@ -92,6 +94,7 @@ public class Aircraft extends Vehicle {
 	/**
  	* This method creates a copy of the current object
 	*/
+	@Override
 	public Aircraft copy() {
 		return new Aircraft(this);
 	}
