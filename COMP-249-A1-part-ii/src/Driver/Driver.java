@@ -23,6 +23,12 @@ import Train_And_Tram.*;
 import WheeledTransportation.*;
 import java.lang.Object;
 
+
+/**
+ * This is the main class in which the program tests and demonstrates the functionality
+ * of the Vehicle class and its subclasses.
+ * It creates many different objects from different classes and creates a copy of each one
+ */
 public class Driver {
 	/**
 	 * This method creates a new array of objects that is the same length as the parameter's array
